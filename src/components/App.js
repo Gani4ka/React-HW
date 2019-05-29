@@ -1,10 +1,9 @@
 import React from 'react';
-// import * as pricingData from './Pricing/pricing.json';
-import Pricing from './Pricing/Pricing';
+import Reader from './Reader/Reader';
 
 const App = () => (
   <>
-    <Pricing plans={[]} />
+    <Reader />
   </>
 );
 
