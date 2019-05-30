@@ -1,5 +1,5 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import AppHW2 from './components/AppHW2';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './components/App';
 
-// ReactDOM.render(<AppHW2 />, document.querySelector('#root'));
+ReactDOM.render(<App />, document.querySelector('#root'));
