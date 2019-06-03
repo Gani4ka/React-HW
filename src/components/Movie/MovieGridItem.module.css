@@ -1,4 +1,4 @@
-.movie-card {
+.card {
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
@@ -10,22 +10,22 @@
   overflow: hidden;
 }
 
-.movie-card .content {
+.card .content {
   padding: 8px;
 }
 
-.movie-card img {
+.card img {
   display: block;
   max-width: 100%;
 }
 
-.movie-card h2 {
+.card h2 {
   margin-top: 0;
   margin-bottom: 0;
   font-weight: 500;
 }
 
-.movie-card p {
+.card p {
   margin-bottom: 0;
   line-height: 1.5;
 }
