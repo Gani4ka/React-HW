@@ -11,5 +11,5 @@ const MoviePage = ({ children }) => (
 export default MoviePage;
 
 MoviePage.propTypes = {
-  children: PropTypes.ObjectOf(PropTypes.string).isRequired,
+  children: PropTypes.func.isRequired,
 };
