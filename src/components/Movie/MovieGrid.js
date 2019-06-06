@@ -12,43 +12,45 @@ class MovieGrid extends Component {
 
   state = {
     value: '',
+    films: this.filmsArr,
   };
 
   filterFilms = value => {
-    const filteredFilms = [...this.filmsArr];
-    console.log(value, filteredFilms);
+    const filteredFilms = this.filmsArr.filter(film =>
+      film.title.toLowerCase().includes(value),
+    );
+    return filteredFilms;
   };
 
   handleChange = e => {
     const { value } = e.target;
     this.setState({
       value,
+      films: this.filterFilms(value),
     });
     this.filterFilms(value);
   };
 
-  reset = () => {
-    this.setState({
-      value: '',
-    });
-  };
-
   render() {
-    const { value } = this.state;
+    const { value, films } = this.state;
     return (
       <div className={this.gridClasses}>
         <MoviePage>
           <SearchBar value={value} onChange={this.handleChange} />
-          {this.filmsArr.map(film => (
-            <React.Fragment key={film.id}>
-              <MovieGridItem
-                id={film.id}
-                title={film.title}
-                posterUrl={film.posterUrl}
-                overview={film.overview}
-              />
-            </React.Fragment>
-          ))}
+          {films.length !== 0 ? (
+            films.map(film => (
+              <React.Fragment key={film.id}>
+                <MovieGridItem
+                  id={film.id}
+                  title={film.title}
+                  posterUrl={film.posterUrl}
+                  overview={film.overview}
+                />
+              </React.Fragment>
+            ))
+          ) : (
+            <span>No matchings results!</span>
+          )}
         </MoviePage>
       </div>
     );
