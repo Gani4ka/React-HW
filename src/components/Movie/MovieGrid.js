@@ -11,20 +11,24 @@ class MovieGrid extends Component {
   gridClasses = [styles.grid];
 
   state = {
-    value: '',
+    // inputValue: '',
+    // filteredFilms: this.filmsArr,
   };
 
   filterFilms = value => {
-    const filteredFilms = [...this.filmsArr];
-    console.log(value, filteredFilms);
+    // const filteredFilms = [...this.filmsArr];
+    const filteredFilms = this.filmsArr.map(item =>
+      item.title.includes(value.toLowerCase),
+    );
+    return filteredFilms;
   };
 
-  handleChange = e => {
-    const { value } = e.target;
+  handleChange = () => {
+    // const { value } = e.target;
     this.setState({
-      value,
+      // inputValue: value,
+      // filteredFilms: this.filterFilms(value),
     });
-    this.filterFilms(value);
   };
 
   reset = () => {
