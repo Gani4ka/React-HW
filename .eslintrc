@@ -33,7 +33,10 @@
       2,
       "always",
       { "ignoreClassFields": true }
-    ]
+    ],
+    "react/no-access-state-in-setstate": 0,
+    "react/no-direct-mutation-state": 0,
+    "eqeqeq": 0
   },
   "globals": {
     "window": true,
