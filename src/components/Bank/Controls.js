@@ -42,7 +42,10 @@ class Controls extends Component {
 
   notify2 = () => toast('Введите сумму для проведения операции.');
 
-  checkBalance = () => this.props.balance >= this.state.value;
+  checkBalance = () => {
+    console.log(this.props.balance, this.state.value);
+    return this.props.balance >= this.state.value;
+  };
 
   render() {
     const { value } = this.state;
