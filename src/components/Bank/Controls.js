@@ -22,7 +22,7 @@ class Controls extends Component {
   };
 
   handlerSubmit = e => {
-    if (this.state.value <= 0 || this.state.value == '') {
+    if (this.state.value <= 0 || this.state.value === '') {
       this.notify2();
       return;
     }
@@ -43,8 +43,7 @@ class Controls extends Component {
   notify2 = () => toast('Введите сумму для проведения операции.');
 
   checkBalance = () => {
-    console.log(this.props.balance, this.state.value);
-    return this.props.balance >= this.state.value;
+    return Number(this.props.balance) >= Number(this.state.value);
   };
 
   render() {
