@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import * as data from './publication.json';
-import Article from './Article';
-import Counter from './Counter';
-import Controls from './Controls';
+import * as data from '../publication.json';
+import Article from '../Article/Article';
+import Counter from '../Counter/Counter';
+import Controls from '../Controls/Controls';
 import styles from './Reader.module.css';
 
 const readerClasses = [styles.reader];
@@ -15,15 +15,9 @@ class Reader extends Component {
 
   state = { articleNumber: this.props.articleNumber };
 
-  handleIncrement = () => {
+  handleCount = num => {
     this.setState(prevState => ({
-      articleNumber: prevState.articleNumber + 1,
-    }));
-  };
-
-  handleDecrement = () => {
-    this.setState(prevState => ({
-      articleNumber: prevState.articleNumber - 1,
+      articleNumber: prevState.articleNumber + num,
     }));
   };
 
@@ -41,8 +35,7 @@ class Reader extends Component {
           numberOfAllArticles={publications.length}
         />
         <Controls
-          handleDecrement={this.handleDecrement}
-          handleIncrement={this.handleIncrement}
+          handleCount={this.handleCount}
           isIncreamentDesabled={isIncreamentDesabled()}
           isDecreamentDesabled={isDecreamentDesabled()}
         />

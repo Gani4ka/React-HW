@@ -6,8 +6,7 @@ const controlsClasses = [styles.controls];
 const buttonClasses = [styles.button];
 
 const Controls = ({
-  handleDecrement,
-  handleIncrement,
+  handleCount,
   isIncreamentDesabled,
   isDecreamentDesabled,
 }) => (
@@ -16,7 +15,7 @@ const Controls = ({
       className={buttonClasses}
       disabled={isDecreamentDesabled}
       type="button"
-      onClick={handleDecrement}
+      onClick={() => handleCount(-1)}
     >
       Назад
     </button>
@@ -24,7 +23,7 @@ const Controls = ({
       className={buttonClasses}
       disabled={isIncreamentDesabled}
       type="button"
-      onClick={handleIncrement}
+      onClick={() => handleCount(1)}
     >
       Вперед
     </button>
@@ -32,8 +31,7 @@ const Controls = ({
 );
 
 Controls.propTypes = {
-  handleDecrement: PropTypes.func.isRequired,
-  handleIncrement: PropTypes.func.isRequired,
+  handleCount: PropTypes.func.isRequired,
   isIncreamentDesabled: PropTypes.bool.isRequired,
   isDecreamentDesabled: PropTypes.bool.isRequired,
 };

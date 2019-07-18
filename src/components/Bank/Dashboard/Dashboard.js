@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import uniqid from 'uniqid';
 import styles from './Dashboard.module.css';
-import Controls from './Controls';
-import Balans from './Balans';
-import History from './History';
+import Controls from '../Controls/Controls';
+import Balans from '../Balance/Balans';
+import History from '../History/History';
 
 export default class Dashboard extends Component {
   dashboardClasses = [styles.dashboard];

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import * as data from './movies.json';
-import MoviePage from './MoviePage';
-import MovieGridItem from './MovieGridItem';
-import SearchBar from './SearchBar';
+import * as data from '../movies.json';
+import MoviePage from '../Movie-page/MoviePage';
+import MovieGridItem from './MovieCridItem/MovieGridItem';
+import SearchBar from '../Search-bar/SearchBar';
 import styles from './MovieGrid.module.css';
 
 class MovieGrid extends Component {

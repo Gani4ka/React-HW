@@ -14,11 +14,9 @@ const Balans = ({ balance }) => (
   <p className={balansClasses}>
     <span>
       <span style={greenStyle}>&#8593; {balance.deposite}</span>
-      {}$
     </span>
     <span>
       <span style={redStyle}>&darr; {balance.withdrow}</span>
-      {}$
     </span>
     <span>Balance: {balance.balance}$</span>
   </p>
